@@ -4,308 +4,102 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alê Ferreira | Estética e Beleza</title>
-<meta name="description" content="Corte, coloração, mechas, escova, tratamentos capilares e estética com a Alê Ferreira. Agende seu horário pelo WhatsApp.">
+<meta name="description" content="Salão Alê Ferreira Estética e Beleza: cabelo, sobrancelha, pele, unhas e maquiagem com atendimento personalizado. Agende pelo WhatsApp.">
 <meta name="theme-color" content="#2B2B29">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Alê Ferreira | Estética e Beleza">
-<meta property="og:description" content="Cabelo saudável e beleza que é sua. Agende seu horário pelo WhatsApp.">
+<meta property="og:description" content="Salão Alê Ferreira Estética e Beleza: cabelo, sobrancelha, pele, unhas e maquiagem com atendimento personalizado. Agende pelo WhatsApp.">
+<link rel="icon" href="img/logo-badge.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
-<style>
-/* Layout: herói em duas colunas (texto | foto em arco) como a referência 1; depois cards de serviço grandes, antes e depois e faixa do Instagram como a referência 2. Tudo nas cores da logo: grafite e dourado. */
-:root {
-  --ink: #232321;        /* grafite mais fundo */
-  --coal: #2E2E2C;       /* fundo da logo */
-  --coal-2: #383835;     /* superfícies */
-  --line: #4A4843;
-  --ivory: #F4EDE1;      /* texto principal */
-  --muted: #B3AB9D;
-  --gold: #C9A35A;       /* dourado da logo */
-  --gold-l: #E9D29A;
-  --gold-d: #8E6C2F;
-  --grad: linear-gradient(100deg, #8E6C2F 0%, #D9B66E 38%, #F1DEA8 52%, #C9A35A 70%, #8E6C2F 100%);
-  --serif: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
-  --cond: 'Bebas Neue', 'Oswald', Impact, 'Arial Narrow', sans-serif;
-  --body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --script: 'Allura', 'Brush Script MT', cursive;
-  --r: 18px;
-  color-scheme: dark;
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--coal); color: var(--ivory); font: 400 16px/1.65 var(--body); }
-img { max-width: 100%; display: block; }
-a { color: inherit; }
-button { font: inherit; touch-action: manipulation; }
-h1, h2, h3 { text-wrap: balance; margin: 0; }
-:focus-visible { outline: 2px solid var(--gold-l); outline-offset: 3px; border-radius: 6px; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
-.eyebrow { font: 800 11.5px/1.2 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
-.goldtxt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.rule { width: 56px; height: 1.5px; background: var(--grad); border: 0; margin: 0; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 24px; border-radius: 4px; font: 700 12.5px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; cursor: pointer; border: 0; transition: transform .2s ease, filter .2s ease; }
-.btn:active { transform: scale(.97); }
-.btn-gold { background: var(--grad); background-size: 200% 100%; color: #1E1D1B; }
-.btn-gold:hover { filter: brightness(1.08); }
-.btn-line { background: transparent; color: var(--ivory); border: 1.5px solid var(--line); }
-.btn-line:hover { border-color: var(--gold); }
-.btn svg { flex: none; }
-
-/* topo */
-.top { position: sticky; top: 0; z-index: 40; background: rgba(35,35,33,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top, 0px); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 68px; }
-.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand img { width: 46px; height: 46px; border-radius: 50%; box-shadow: 0 0 0 1.5px var(--gold-d); }
-.brand span { display: flex; flex-direction: column; line-height: 1; }
-.brand b { font: 600 19px/1 var(--serif); letter-spacing: .14em; text-transform: uppercase; }
-.brand small { font-size: 9.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-top: 5px; }
-.nav { display: none; gap: 28px; font: 700 12px var(--body); letter-spacing: .14em; text-transform: uppercase; }
-.nav a { text-decoration: none; color: var(--muted); }
-.nav a:hover { color: var(--gold-l); }
-.nav a { padding-block: 6px; border-bottom: 1.5px solid transparent; }
-.nav a[aria-current="page"] { color: var(--gold); border-color: var(--gold); }
-.top .btn { min-height: 42px; padding: 0 16px; font-size: 11px; }
-@media (min-width: 940px) { .nav { display: flex; } .top .btn { padding: 0 22px; } }
-
-/* herói (referência 1): foto sangrando à direita, texto à esquerda sobre degradê */
-.hero { position: relative; overflow: hidden; background: var(--coal); isolation: isolate; }
-.hero-pic { position: relative; height: min(92vw, 440px); }
-.hero-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 20%; }
-.hero-pic::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(46,46,44,0) 55%, var(--coal) 100%); }
-.hero .wrap { position: relative; display: grid; padding-block: 8px 44px; }
-.hero-copy { display: flex; flex-direction: column; gap: 20px; min-width: 0; max-width: 640px; }
-.hero h1 { font: 500 clamp(46px, 12vw, 84px)/1 var(--serif); letter-spacing: -.012em; }
-.hero h1 em { font-style: normal; }
-.hero p { margin: 0; color: var(--muted); max-width: 440px; font-size: 16px; line-height: 1.7; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-.proof { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
-.faces { display: flex; }
-.faces img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--coal); margin-left: -10px; }
-.faces img:first-child { margin-left: 0; }
-.proof b { display: block; font-size: 13px; font-weight: 600; }
-.proof span { font-size: 12px; color: var(--muted); }
-.stars { color: var(--gold); letter-spacing: 2px; }
-.seal { position: absolute; z-index: 2; right: max(16px, env(safe-area-inset-right, 0px)); top: calc(min(92vw, 440px) - 120px); width: 104px; height: 104px; border-radius: 50%; background: var(--grad); color: #1E1D1B; display: grid; place-items: center; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
-.seal svg { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); animation: spin 22s linear infinite; }
-.seal span { font: 400 40px/1 var(--script); color: #1E1D1B; }
-@keyframes spin { to { transform: rotate(360deg); } }
-@media (min-width: 900px) {
-  .hero { min-height: 560px; display: flex; align-items: center; }
-  .hero-pic { position: absolute; top: 0; right: 0; bottom: 0; width: 58%; height: auto; z-index: -1; }
-  .hero-pic img { object-position: 50% 32%; }
-  .hero-pic::after { background: linear-gradient(90deg, var(--coal) 0%, rgba(46,46,44,.85) 14%, rgba(46,46,44,0) 46%); }
-  .hero .wrap { width: 100%; padding-block: 80px 70px; }
-  .seal { top: auto; right: max(120px, calc((100vw - 1180px) / 2 + 100px)); bottom: 34px; width: 118px; height: 118px; }
-}
-
-/* diferenciais */
-.perks { background: var(--ink); border-block: 1px solid var(--line); }
-.perks ul { list-style: none; margin: 0; padding-block: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
-.perks li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-.perks .ico { width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--gold-d); display: grid; place-items: center; color: var(--gold); }
-.perks b { font: 600 19px/1.15 var(--serif); }
-.perks span { font-size: 13px; color: var(--muted); max-width: 210px; }
-@media (min-width: 900px) { .perks ul { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-block: 38px; } .perks li + li { border-left: 1px solid var(--line); } }
-
-/* seções */
-.sec { padding-block: 64px; }
-.pill { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; border: 1px solid var(--gold-d); color: var(--gold-l); border-radius: 999px; padding: 7px 14px; font: 800 11px var(--body); letter-spacing: .16em; text-transform: uppercase; }
-.pill i { font-style: normal; color: var(--gold); }
-.head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
-.head h2 { font: 500 clamp(36px, 8.5vw, 58px)/1 var(--serif); }
-.head p { margin: 0; color: var(--muted); max-width: 520px; }
-
-/* serviços (referência 2) */
-.cards { display: grid; gap: 14px; grid-template-columns: minmax(0, 1fr); }
-.card { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 4/3.3; background: var(--coal-2); isolation: isolate; }
-.card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .6s ease; }
-.card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(20,20,19,0) 35%, rgba(20,20,19,.88) 100%); }
-.card:hover img { transform: scale(1.04); }
-.card .in { position: absolute; left: 18px; right: 18px; bottom: 16px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
-.card h3 { font: 400 clamp(52px, 15vw, 70px)/.86 var(--cond); letter-spacing: .01em; }
-.card p { margin: 6px 0 0; font-size: 13px; color: #DCD4C6; max-width: 200px; line-height: 1.4; }
-.card .go { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--grad); color: #1E1D1B; display: grid; place-items: center; text-decoration: none; }
-@media (min-width: 640px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (min-width: 1040px) { .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } .card { aspect-ratio: 3/3.9; } .card h3 { font-size: 64px; } }
-.extra { margin-top: 18px; display: grid; gap: 0; border: 1px solid var(--line); border-radius: var(--r); padding: 6px 18px; background: var(--ink); }
-.extra h3 { font: 600 22px var(--serif); padding-block: 12px 4px; }
-.extra ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0, 1fr); }
-.extra li { display: flex; justify-content: space-between; gap: 12px; padding-block: 12px; border-top: 1px solid var(--line); font-size: 15px; }
-.extra li span { color: var(--muted); font-size: 13px; text-align: right; }
-@media (min-width: 760px) { .extra ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; } }
-
-/* antes e depois */
-.ba { display: grid; gap: 26px; }
-.ba-copy { display: flex; flex-direction: column; gap: 14px; }
-.ba-copy h2 { font: 400 clamp(56px, 15vw, 88px)/.86 var(--cond); letter-spacing: .01em; }
-.ba-copy p { margin: 0; color: var(--muted); }
-.ba-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
-.ba-tabs button { min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: var(--coal-2); color: var(--ivory); font: 700 13px var(--body); cursor: pointer; }
-.ba-tabs button[aria-pressed="true"] { background: var(--grad); color: #1E1D1B; border-color: transparent; }
-.compare { position: relative; border-radius: var(--r); overflow: hidden; aspect-ratio: 652/572; background: var(--coal-2); user-select: none; -webkit-user-select: none; touch-action: pan-y; border: 1px solid var(--line); }
-.compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; pointer-events: none; }
-.compare .after { clip-path: inset(0 0 0 var(--pos, 50%)); }
-.compare .lbl { position: absolute; top: 14px; z-index: 3; background: rgba(35,35,33,.82); color: var(--gold-l); font: 800 11px var(--body); letter-spacing: .16em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
-.compare .lbl.l { left: 14px; } .compare .lbl.r { right: 14px; }
-.compare .bar { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; margin-left: -1px; background: var(--gold-l); z-index: 2; pointer-events: none; }
-.compare .knob { position: absolute; top: 50%; left: var(--pos, 50%); width: 48px; height: 48px; margin: -24px 0 0 -24px; border-radius: 50%; background: var(--grad); color: #1E1D1B; display: grid; place-items: center; z-index: 2; box-shadow: 0 6px 18px rgba(0,0,0,.4); pointer-events: none; }
-.compare input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; z-index: 4; margin: 0; }
-.compare:focus-within .knob { outline: 2px solid var(--ivory); outline-offset: 3px; }
-.ba-note { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
-@media (min-width: 900px) { .ba { grid-template-columns: 1fr 1fr; align-items: center; gap: 56px; } .compare { max-width: 520px; justify-self: end; } }
-
-/* faixa momento (referência 1) */
-.moment { background: var(--ink); }
-.moment .wrap { display: grid; gap: 0; padding-left: 0; padding-right: 0; max-width: none; }
-.moment-copy { padding-block: 56px; padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 16px; justify-content: center; }
-.moment-copy h2 { font: 500 clamp(40px, 9.5vw, 64px)/1.02 var(--serif); }
-.moment-copy h2 em { font-style: italic; }
-.moment-copy p { margin: 0; color: var(--muted); max-width: 440px; }
-.moment-pic { min-height: 280px; position: relative; }
-.moment-pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.75) sepia(.25) brightness(.85); }
-.moment-pic::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, var(--ink) 0%, rgba(35,35,33,0) 35%); }
-@media (min-width: 900px) { .moment .wrap { grid-template-columns: 1fr 1fr; } .moment-copy { padding-left: max(18px, calc((100vw - 1180px) / 2 + 18px)); } .moment-pic { min-height: 440px; } }
-
-/* instagram (referência 2) */
-.insta { display: grid; gap: 22px; }
-.insta-copy { display: flex; flex-direction: column; gap: 12px; }
-.insta-copy h2 { font: 400 clamp(54px, 14vw, 80px)/.88 var(--cond); }
-.insta-copy p { margin: 0; color: var(--muted); }
-.strip { display: grid; grid-auto-flow: column; grid-auto-columns: 46%; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
-.strip::-webkit-scrollbar { display: none; }
-.strip figure { margin: 0; position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4/5; scroll-snap-align: start; }
-.strip img { width: 100%; height: 100%; object-fit: cover; }
-.strip figcaption { position: absolute; top: 10px; left: 10px; background: var(--grad); color: #1E1D1B; font: 800 10px var(--body); letter-spacing: .1em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; }
-@media (min-width: 900px) { .insta { grid-template-columns: .55fr 2fr; align-items: center; } .strip { grid-auto-flow: row; grid-template-columns: repeat(5, minmax(0, 1fr)); overflow: visible; } }
-
-/* depoimentos */
-.revs { display: grid; gap: 14px; }
-.rev { margin: 0; background: var(--coal-2); border: 1px solid var(--line); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; gap: 12px; }
-.rev blockquote { margin: 0; font: 500 21px/1.35 var(--serif); font-style: italic; }
-.rev figcaption { font-size: 13px; color: var(--muted); }
-.rev figcaption b { color: var(--ivory); display: block; font-size: 14px; }
-.note { font-size: 12px; color: var(--muted); margin-top: 12px; }
-@media (min-width: 900px) { .revs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-
-/* agendar (referência 1) */
-.book { background: var(--ink); border-top: 1px solid var(--line); }
-.book .wrap { display: grid; gap: 30px; padding-block: 60px; }
-.oval { border-radius: 999px; overflow: hidden; aspect-ratio: 2/1; border: 1.5px solid var(--gold-d); }
-.oval img { width: 100%; height: 100%; object-fit: cover; }
-.book h2 { font: 500 clamp(38px, 9vw, 58px)/1.02 var(--serif); }
-.book p { color: var(--muted); margin: 10px 0 18px; }
-.form { display: grid; gap: 12px; }
-.field { display: grid; gap: 6px; }
-.field label { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-l); }
-.field input, .field select { width: 100%; min-height: 50px; padding: 0 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--coal); color: var(--ivory); font: 15px var(--body); }
-.row2 { display: grid; gap: 12px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.err { min-height: 18px; color: #F0A58C; font-size: 13px; margin: 0; }
-.where { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; font-size: 14px; color: var(--muted); }
-.where li { display: flex; gap: 10px; }
-.where svg { color: var(--gold); flex: none; margin-top: 2px; }
-@media (min-width: 900px) { .book .wrap { grid-template-columns: 1fr 1fr; align-items: center; gap: 56px; padding-block: 80px; } }
-
-/* rodapé */
-.foot { padding-block: 40px 30px; border-top: 1px solid var(--line); background: var(--coal); }
-.foot .wrap { display: grid; gap: 22px; }
-.foot img { width: 220px; }
-.foot nav { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 13px; }
-.foot nav a { color: var(--muted); text-decoration: none; }
-.foot small { color: #8A8478; font-size: 12px; }
-
-.wa-float { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 50; width: 58px; height: 58px; border-radius: 50%; background: var(--grad); color: #1E1D1B; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,.45); text-decoration: none; }
-
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
-</style>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Alê Ferreira, início"><img src="img/logo-badge.png" alt=""><span><b>Alê Ferreira</b><small>Estética e Beleza</small></span></a>
-    <nav class="nav" aria-label="Principal"><a href="#inicio" aria-current="page">Início</a><a href="#servicos">Serviços</a><a href="#antes-depois">Antes e depois</a><a href="#galeria">Galeria</a><a href="#agendar">Contato</a></nav>
-    <a class="btn btn-gold" href="#agendar">Agendar</a>
+    <a class="brand" href="index.html" aria-label="Alê Ferreira, início"><img src="img/logo-badge.png" alt=""><span><b>Alê Ferreira</b><small>Estética e Beleza</small></span></a>
+    <nav class="nav" aria-label="Principal"><a href="index.html" aria-current="page">Início</a><a href="servicos.html">Serviços</a><a href="antes-depois.html">Antes e depois</a><a href="galeria.html">Galeria</a><a href="contato.html">Contato</a></nav>
+    <a class="btn btn-gold" href="contato.html" data-agendar="">Agendar</a>
   </div>
+  <nav class="pills" aria-label="Páginas"><div class="wrap"><ul><li><a href="index.html" aria-current="page">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="antes-depois.html">Antes e depois</a></li><li><a href="galeria.html">Galeria</a></li><li><a href="contato.html">Contato</a></li></ul></div></nav>
 </header>
-
-<main id="inicio">
+<main>
 <section class="hero" aria-labelledby="t-hero">
   <div class="hero-pic"><img src="img/hero.webp" alt="Cabeleireira finalizando ondas em uma cliente" fetchpriority="high"></div>
-  <div class="seal" aria-hidden="true">
-    <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50 50 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0"/></defs><text font-family="Manrope, sans-serif" font-size="9.6" font-weight="800" letter-spacing="2.6" fill="#1E1D1B"><textPath href="#circ">ALÊ FERREIRA · ESTÉTICA E BELEZA ·</textPath></text></svg>
-    <span>af</span>
-  </div>
+  <div class="seal" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="circ" d="M50 50 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0"/></defs><text font-family="Manrope, sans-serif" font-size="9.6" font-weight="800" letter-spacing="2.6" fill="#1E1D1B"><textPath href="#circ">ALÊ FERREIRA · ESTÉTICA E BELEZA ·</textPath></text></svg><span>af</span></div>
   <div class="wrap">
     <div class="hero-copy">
       <span class="eyebrow">Onde a sua confiança floresce</span>
       <h1 id="t-hero">Cabelo saudável.<br>Beleza que é sua.<br><em class="goldtxt">Todo dia.</em></h1>
       <hr class="rule">
       <p>Cuidado especializado. Tratamentos personalizados.<br>Uma beleza leve que dura.</p>
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="#agendar">Agende seu momento <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              </div>
-      <div class="proof">
-        <div class="faces" aria-hidden="true"><img src="img/i5.webp" alt=""><img src="img/i4.webp" alt=""><img src="img/i2.webp" alt=""></div>
-        <div><b>Amado por +500 clientes</b><span><span class="stars" aria-label="5 estrelas">★★★★★</span> 4,9 no Google (exemplo)</span></div>
-      </div>
-    </div>
-</section>
-
-<section class="perks" aria-label="Diferenciais">
-  <div class="wrap"><ul>
-    <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5c0 4-3 7.5-7 10.5z"/></svg></span><b>Produtos premium</b><span>Marcas profissionais que cuidam do fio.</span></li>
-    <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9.5l-4.2 1.9L12 16l-1.8-4.6L6 9.5l4.2-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><b>Mãos experientes</b><span>Técnica atualizada em cor e corte.</span></li>
-    <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6a5 5 0 0 0-8.8-3.2 5 5 0 0 0-8.8 3.2c0 5.4 8.8 10.4 8.8 10.4s8.8-5 8.8-10.4z"/></svg></span><b>Atendimento único</b><span>Diagnóstico do seu cabelo antes de tudo.</span></li>
-    <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><b>Agenda fácil</b><span>Marque pelo WhatsApp em um minuto.</span></li>
-  </ul></div>
-</section>
-
-<section class="sec" id="servicos" aria-labelledby="t-serv">
-  <div class="wrap">
-    <div class="head">
-      <span class="pill">Nossos serviços <i>✦</i></span>
-      <h2 id="t-serv">Cuidado completo, <em class="goldtxt">do fio à pele</em></h2>
-      <p>Do corte ao tratamento, cada serviço é pensado para o seu tipo de cabelo e para o resultado que você quer ver no espelho.</p>
-    </div>
-    <div class="cards">
-      <article class="card"><img src="img/corte.webp" alt="Corte bob com ondas" loading="lazy"><div class="in"><div><h3>Corte</h3><p>Cortes que valorizam o seu rosto e o seu estilo.</p></div><a class="go" href="#agendar" data-servico="Corte" aria-label="Agendar corte"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-      <article class="card"><img src="img/coloracao.webp" alt="Mechas iluminadas em cabelo ondulado" loading="lazy"><div class="in"><div><h3>Cor</h3><p>Coloração, mechas e morena iluminada.</p></div><a class="go" href="#agendar" data-servico="Coloração e mechas" aria-label="Agendar coloração"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-      <article class="card"><img src="img/escova.webp" alt="Escova modelada com ondas" loading="lazy"><div class="in"><div><h3>Escova</h3><p>Escova, babyliss e penteados para eventos.</p></div><a class="go" href="#agendar" data-servico="Escova e penteado" aria-label="Agendar escova"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-      <article class="card"><img src="img/tratamento.webp" alt="Cliente relaxando no lavatório durante tratamento" loading="lazy"><div class="in"><div><h3>Tratar</h3><p>Hidratação, nutrição, reconstrução e botox capilar.</p></div><a class="go" href="#agendar" data-servico="Tratamento capilar" aria-label="Agendar tratamento"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></article>
-    </div>
-    <div class="extra">
-      <h3>Estética e beleza</h3>
-      <ul>
-        <li>Design de sobrancelhas <span>com ou sem henna</span></li>
-        <li>Limpeza de pele <span>profunda</span></li>
-        <li>Manicure e pedicure <span>tradicional e em gel</span></li>
-        <li>Maquiagem <span>social e para noivas</span></li>
-      </ul>
+      <div class="hero-actions"><a class="btn btn-gold" href="contato.html" data-agendar="">Agende seu momento <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-line" href="#sobre">Conheça o salão</a></div>
+      <div class="proof"><div class="faces" aria-hidden="true"><img src="img/g5.webp" alt="" loading="lazy"><img src="img/g4.webp" alt="" loading="lazy"><img src="img/g2.webp" alt="" loading="lazy"></div><div><b>Clientes que voltam sempre</b><span><span class="stars" aria-label="5 estrelas">★★★★★</span> 4,9 no Google (exemplo)</span></div></div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="antes-depois" aria-labelledby="t-ba" style="padding-top:0">
-  <div class="wrap ba">
-    <div class="ba-copy">
-      <span class="pill">Resultados <i>✦</i></span>
-      <h2 id="t-ba">Antes <span class="goldtxt">&amp;</span><br>depois</h2>
-      <p>Arraste a linha para ver a transformação. Transformação real, confiança real.</p>
-      <a class="btn btn-gold" href="#agendar" style="align-self:flex-start">Quero esse resultado</a>
+<section class="perks" aria-label="Diferenciais"><div class="wrap"><ul>
+  <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5c0 4-3 7.5-7 10.5z"/></svg></span><b>Produtos premium</b><span>Marcas profissionais que cuidam do fio.</span></li>
+  <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.6L18 9.5l-4.2 1.9L12 16l-1.8-4.6L6 9.5l4.2-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg></span><b>Mãos experientes</b><span>Técnica atualizada em cor e corte.</span></li>
+  <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 8.6a5 5 0 0 0-8.8-3.2 5 5 0 0 0-8.8 3.2c0 5.4 8.8 10.4 8.8 10.4s8.8-5 8.8-10.4z"/></svg></span><b>Atendimento único</b><span>Diagnóstico do seu cabelo antes de tudo.</span></li>
+  <li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><b>Agenda fácil</b><span>Marque pelo WhatsApp em um minuto.</span></li>
+</ul></div></section>
+
+<section class="sec" id="sobre" aria-labelledby="t-sobre">
+  <div class="wrap about">
+    <div class="about-pic"><img src="img/sobre.webp" alt="Alê Ferreira, fundadora do salão" loading="lazy"></div>
+    <div class="about-copy">
+      <span class="pill">Quem somos <i>✦</i></span>
+      <h2 id="t-sobre">Um salão feito para você <em class="goldtxt">se sentir em casa</em></h2>
+      <p>O Alê Ferreira Estética e Beleza nasceu de um sonho simples: ter um lugar onde cada cliente fosse ouvida antes de qualquer tesoura ou pincel. Começou pequeno, com poucas cadeiras e muita dedicação, e cresceu no boca a boca de quem saía daqui mais confiante.</p>
+      <p>Hoje somos um espaço completo de cabelo e estética. Cada atendimento começa com uma conversa e um diagnóstico do fio e da pele, para indicar só o que faz sentido para você, sem empurrar serviço.</p>
+      <span class="sign" aria-hidden="true">Alê Ferreira</span>
+      <ul class="numbers"><li><b>+8</b><span>anos cuidando de cabelos</span></li><li><b>+500</b><span>clientes atendidas</span></li><li><b>4,9</b><span>nota média no Google</span></li></ul>
+      <p class="note" style="margin:0">Números de exemplo: trocar pelos dados reais do salão.</p>
     </div>
-    <div>
-      <div class="compare" style="--pos:50%">
-        <img src="img/antes.webp" alt="Antes: cabelo liso e sem brilho">
-        <img class="after" src="img/depois.webp" alt="Depois: ondas com mechas iluminadas">
-        <span class="lbl l">Antes</span><span class="lbl r">Depois</span>
-        <span class="bar"></span>
-        <span class="knob" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
-        <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
-      </div>
-      <p class="ba-note">Mechas iluminadas com ondas modeladas. Foto ilustrativa até receber as fotos reais do salão.</p>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="t-est" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="pill">Nossa estrutura <i>✦</i></span><h2 id="t-est">Tudo pensado para o seu conforto</h2><p>Do café na chegada ao último fio no lugar: os detalhes que fazem você querer voltar.</p></div>
+    <ul class="specs"><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5"/></svg></span><div><b>Ambiente climatizado</b><span>Espaço confortável, com música ambiente e luz pensada para o seu momento.</span></div></li><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6.5-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5c0 4-3 7.5-7 10.5z"/></svg></span><div><b>Produtos profissionais</b><span>Trabalhamos só com marcas profissionais, escolhidas para cada tipo de fio.</span></div></li><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><b>Materiais esterilizados</b><span>Alicates, pentes e escovas higienizados a cada atendimento.</span></div></li><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><div><b>Hora marcada</b><span>Você chega e é atendida no seu horário, sem fila de espera.</span></div></li><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v5a6 6 0 0 1-12 0z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17M7 3v2M11 3v2"/></svg></span><div><b>Café e Wi‑Fi</b><span>Um cafezinho e internet liberada enquanto o tratamento age.</span></div></li><li><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><div><b>Formas de pagamento</b><span>Pix, cartão de débito e crédito.</span></div></li></ul>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="t-esp" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="pill">O espaço <i>✦</i></span><h2 id="t-esp">Conheça o salão</h2></div>
+    <div class="space">
+      <figure><img src="img/espaco-1.webp" alt="Salão com espelhos em arco e poltronas" loading="lazy"><figcaption>Salão</figcaption></figure>
+      <figure><img src="img/espaco-2.webp" alt="Lavatório com poltronas reclináveis" loading="lazy"><figcaption>Lavatório</figcaption></figure>
+      <figure><img src="img/espaco-3.webp" alt="Recepção do salão" loading="lazy"><figcaption>Recepção</figcaption></figure>
+      <figure><img src="img/momento.webp" alt="Detalhe da decoração com vaso e vela" loading="lazy"><figcaption>Detalhes</figcaption></figure>
+      <figure><img src="img/espaco-4.webp" alt="Bancada de manicure" loading="lazy"><figcaption>Unhas</figcaption></figure>
     </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="t-go" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="pill">Explore <i>✦</i></span><h2 id="t-go">Veja o nosso trabalho</h2></div>
+    <div class="go-cards">
+      <a class="go-card" href="servicos.html"><img src="img/coloracao.webp" alt="" loading="lazy"><div class="in"><div><h3>Serviços</h3><p>Cabelo, unhas, sobrancelha e pele.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="go-card" href="antes-depois.html"><img src="img/ad1-depois.webp" alt="" loading="lazy"><div class="in"><div><h3>Antes e depois</h3><p>Transformações reais das clientes.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+      <a class="go-card" href="galeria.html"><img src="img/g3.webp" alt="" loading="lazy"><div class="in"><div><h3>Galeria</h3><p>Looks recentes direto do salão.</p></div><span class="go"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="t-dep" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><span class="pill">O que as clientes dizem <i>✦</i></span><h2 id="t-dep">Quem senta na cadeira, volta</h2></div>
+    <div class="revs"><figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Saí do salão me sentindo outra pessoa. A Alê entendeu exatamente o que eu queria e o cabelo ficou leve, com brilho, sem perder o comprimento.</blockquote><figcaption class="who"><span class="av" aria-hidden="true">M</span><span><b>Mariana S.</b><span class="tag">Mechas e corte</span></span></figcaption></figure><figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Meu cabelo estava muito danificado da progressiva. Depois do cronograma ele voltou a ter vida. Atendimento super cuidadoso.</blockquote><figcaption class="who"><span class="av" aria-hidden="true">J</span><span><b>Juliana R.</b><span class="tag">Tratamento capilar</span></span></figcaption></figure><figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Fiz a maquiagem do casamento da minha irmã e durou a noite inteira. O ambiente é lindo e todo mundo é muito atencioso.</blockquote><figcaption class="who"><span class="av" aria-hidden="true">C</span><span><b>Camila P.</b><span class="tag">Sobrancelha e maquiagem</span></span></figcaption></figure></div>
+    <p class="note">Avaliações de exemplo: trocar pelas avaliações reais do Google, com autorização das clientes.</p>
   </div>
 </section>
 
@@ -315,121 +109,20 @@ h1, h2, h3 { text-wrap: balance; margin: 0; }
       <span class="eyebrow">Mais que um salão</span>
       <h2 id="t-mom">É o seu tempo.<br><em class="goldtxt">É o seu brilho.</em></h2>
       <p>Aqui você desacelera. Um café, uma boa conversa e o cuidado de quem faz isso com amor. Você sai mais bonita e mais leve.</p>
-      <a class="btn btn-line" href="#agendar" style="align-self:flex-start">Conhecer a Alê</a>
+      <a class="btn btn-gold" href="contato.html" data-agendar="" style="align-self:flex-start">Agendar meu horário</a>
     </div>
     <div class="moment-pic"><img src="img/momento.webp" alt="Vaso com folhas, vela e livros em uma bancada" loading="lazy"></div>
   </div>
 </section>
-
-<section class="sec" id="galeria" aria-labelledby="t-ig">
-  <div class="wrap insta">
-    <div class="insta-copy">
-      <h2 id="t-ig">Insta <span class="goldtxt">glam</span></h2>
-      <p>Looks novos toda semana direto do salão.</p>
-      <a class="btn btn-line" href="https://www.instagram.com/" target="_blank" rel="noopener" style="align-self:flex-start">Seguir no Instagram</a>
-    </div>
-    <div class="strip">
-      <figure><img src="img/i1.webp" alt="Ondas castanhas longas" loading="lazy"><figcaption>Em alta</figcaption></figure>
-      <figure><img src="img/i2.webp" alt="Penteado preso com mechas" loading="lazy"></figure>
-      <figure><img src="img/i3.webp" alt="Loiro mel com ondas" loading="lazy"><figcaption>Novo look</figcaption></figure>
-      <figure><img src="img/i4.webp" alt="Corte curto ondulado" loading="lazy"></figure>
-      <figure><img src="img/i5.webp" alt="Morena iluminada" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="t-dep" style="padding-top:0">
-  <div class="wrap">
-    <div class="head"><span class="pill">Depoimentos <i>✦</i></span><h2 id="t-dep">Quem senta na cadeira, volta</h2></div>
-    <div class="revs">
-      <figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Aqui entra uma avaliação real do Google sobre o corte ou a coloração.</blockquote><figcaption><b>Cliente 1</b>Exemplo de avaliação</figcaption></figure>
-      <figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Aqui entra uma avaliação real sobre o atendimento e o ambiente.</blockquote><figcaption><b>Cliente 2</b>Exemplo de avaliação</figcaption></figure>
-      <figure class="rev"><div class="stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Aqui entra uma avaliação real sobre sobrancelha, pele ou maquiagem.</blockquote><figcaption><b>Cliente 3</b>Exemplo de avaliação</figcaption></figure>
-    </div>
-    <p class="note">Espaço reservado para avaliações reais do Google, com autorização das clientes.</p>
-  </div>
-</section>
-
-<section class="book" id="agendar" aria-labelledby="t-book">
-  <div class="wrap">
-    <div>
-      <div class="oval"><img src="img/salao.webp" alt="Salão com espelhos em arco e poltronas" loading="lazy"></div>
-      <ul class="where">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>[Endereço do salão]</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>[Dias e horários de atendimento]</li>
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/></svg>[WhatsApp do salão]</li>
-      </ul>
-    </div>
-    <div>
-      <span class="eyebrow">Agende agora</span>
-      <h2 id="t-book" style="margin-top:12px">Pronta para o seu <em class="goldtxt">melhor cabelo?</em></h2>
-      <p>Escolha o serviço e o melhor dia. A mensagem já vai pronta para o WhatsApp da Alê.</p>
-      <form class="form" id="form" novalidate>
-        <div class="field"><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" autocomplete="name" placeholder="Ex.: Mariana"></div>
-        <div class="field"><label for="f-serv">Serviço</label>
-          <select id="f-serv" name="servico">
-            <option>Corte</option><option>Coloração e mechas</option><option>Escova e penteado</option><option>Tratamento capilar</option>
-            <option>Design de sobrancelhas</option><option>Limpeza de pele</option><option>Manicure e pedicure</option><option>Maquiagem</option>
-          </select></div>
-        <div class="row2">
-          <div class="field"><label for="f-dia">Dia</label><input id="f-dia" name="dia" type="date"></div>
-          <div class="field"><label for="f-per">Período</label><select id="f-per" name="periodo"><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
-        </div>
-        <p class="err" id="err" role="alert"></p>
-        <button class="btn btn-gold" type="submit">Enviar no WhatsApp</button>
-      </form>
-    </div>
-  </div>
-</section>
 </main>
-
 <footer class="foot">
   <div class="wrap">
     <img src="img/logo-gold.png" alt="Alê Ferreira Estética e Beleza">
-    <nav aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#antes-depois">Antes e depois</a><a href="#galeria">Galeria</a><a href="#agendar">Agendar</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></nav>
-    <small>Proposta de site para Alê Ferreira Estética e Beleza · fotos e avaliações ilustrativas até a aprovação.</small>
+    <nav aria-label="Rodapé"><a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="antes-depois.html">Antes e depois</a><a href="galeria.html">Galeria</a><a href="contato.html">Contato</a></nav>
+    <small>© <span id="ano">2026</span> Alê Ferreira Estética e Beleza · Proposta de site: fotos, números e avaliações ilustrativos até a aprovação.</small>
   </div>
 </footer>
-
-<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c.5 2 2 3.5 4 4.5l1.3-1.2 2 1-.5 1.7c-3.5 0-7-3.5-7-7l1.7-.5 1 2z"/></svg></a>
-
-<script>
-(function () {
-  var WHATS = ''; // número com DDI, ex.: '5591999990000'
-  function wa(msg) { return 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg); }
-  document.getElementById('wa-float').href = wa('Olá, Alê! Vim pelo site e quero agendar um horário.');
-
-  // links internos: rolam até a seção (funciona também na pré-visualização)
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a[href^="#"]'); if (!a) return;
-    var id = a.getAttribute('href').slice(1); var t = id && document.getElementById(id); if (!t) return;
-    e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    var s = a.getAttribute('data-servico'); if (s) document.getElementById('f-serv').value = s;
-  });
-
-  // antes e depois
-  var cmp = document.querySelector('.compare'), rg = document.getElementById('ba-range');
-  function setPos(v) { cmp.style.setProperty('--pos', v + '%'); }
-  rg.addEventListener('input', function () { setPos(rg.value); });
-  function fromPointer(x) { var r = cmp.getBoundingClientRect(); var v = Math.max(0, Math.min(100, (x - r.left) / r.width * 100)); rg.value = v; setPos(v); }
-  cmp.addEventListener('touchmove', function (e) { fromPointer(e.touches[0].clientX); }, { passive: true });
-  cmp.addEventListener('touchstart', function (e) { fromPointer(e.touches[0].clientX); }, { passive: true });
-
-  // data mínima = hoje
-  var d = document.getElementById('f-dia'); var now = new Date(); now.setMinutes(now.getMinutes() - now.getTimezoneOffset()); d.min = now.toISOString().slice(0, 10);
-
-  // agendamento pelo WhatsApp
-  var f = document.getElementById('form'), err = document.getElementById('err');
-  f.addEventListener('input', function () { err.textContent = ''; });
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var nome = f.nome.value.trim();
-    if (!nome) { err.textContent = 'Digite seu nome para a Alê saber quem é.'; f.nome.focus(); return; }
-    var dia = f.dia.value ? f.dia.value.split('-').reverse().join('/') : 'a combinar';
-    var msg = 'Olá, Alê! Sou ' + nome + ' e quero agendar:\n\nServiço: ' + f.servico.value + '\nDia: ' + dia + '\nPeríodo: ' + f.periodo.value + '\n\nVim pelo site.';
-    var a = document.createElement('a'); a.href = wa(msg); a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
-  });
-})();
-</script>
+<a class="wa-float" href="contato.html" data-agendar="" aria-label="Falar no WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 19z"/><path d="M9 9.5c.5 2 2 3.5 4 4.5l1.3-1.2 2 1-.5 1.7c-3.5 0-7-3.5-7-7l1.7-.5 1 2z"/></svg></a>
+<script src="js/site.js"></script>
 </body>
 </html>
